@@ -1,0 +1,44 @@
+# Este archivo será renombrado a .gitignore al copiarse al repo GitHub
+
+# === Material de proceso / privado (NO va al repo público) ===
+guion-video.md
+enunciado-tpi.md
+docs/documentacion.md
+docs/documentacion.docx
+docs/generar_documentacion_word.py
+entrega/
+INSTRUCCIONES-GITHUB.md
+setup-github.sh
+setup-github.ps1
+.gitignore_para_repo
+
+# === Python ===
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.Python
+*.so
+
+# === Entornos virtuales ===
+.venv/
+venv/
+env/
+ENV/
+
+# === Editores e IDEs ===
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# === Sistema operativo ===
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# === Logs y temp ===
+*.log
+*.tmp
+.cache/

@@ -7,54 +7,43 @@ y devuelven el resultado calculado.
 """
 
 
-def pais_mayor_poblacion(paises):
-    """Devuelve el país con MAYOR población. None si la lista está vacía."""
-    if not paises:
+def pais_mayor_poblacion(paises):                                                # Devuelve el país con MAYOR población. None si la lista está vacía
+        if not paises:
         return None
     return max(paises, key=lambda p: p["poblacion"])
 
 
-def pais_menor_poblacion(paises):
-    """Devuelve el país con MENOR población. None si la lista está vacía."""
+def pais_menor_poblacion(paises):                                                # Devuelve el país con MENOR población. None si la lista está vacía.
     if not paises:
         return None
     return min(paises, key=lambda p: p["poblacion"])
 
 
-def promedio_poblacion(paises):
-    """Devuelve el promedio de población. 0 si la lista está vacía."""
+def promedio_poblacion(paises):                                                  # Devuelve el promedio de población. 0 si la lista está vacía. 
     if not paises:
         return 0
     return sum(p["poblacion"] for p in paises) / len(paises)
 
 
-def promedio_superficie(paises):
-    """Devuelve el promedio de superficie. 0 si la lista está vacía."""
+def promedio_superficie(paises):                                                 # Devuelve el promedio de superficie. 0 si la lista está vacía. 
     if not paises:
         return 0
     return sum(p["superficie"] for p in paises) / len(paises)
 
 
-def cantidad_por_continente(paises):
-    """Devuelve un diccionario {continente: cantidad}.
-
-    Recorre la lista una sola vez sumando contadores. Ordena el resultado
-    por cantidad descendente para hacer la salida más legible.
-    """
+def cantidad_por_continente(paises):                                             # Devuelve un diccionario {continente: cantidad}, recorre la lista una sola vez sumando contadores y ordena el resultadopor cantidad descendente para hacer la salida más legible.    
     conteo = {}
     for p in paises:
         cont = p["continente"]
         conteo[cont] = conteo.get(cont, 0) + 1
 
-    # Devolver ordenado por cantidad descendente (orden estable de claves)
     return dict(sorted(conteo.items(), key=lambda kv: kv[1], reverse=True))
 
 
 # ---------------------------------------------------------------------------
 # Helper para imprimir todas las estadísticas
 # ---------------------------------------------------------------------------
-def mostrar_estadisticas(paises):
-    """Imprime todas las estadísticas requeridas por la consigna."""
+def mostrar_estadisticas(paises):                                                # Imprime todas las estadísticas requeridas por la consigna.
     if not paises:
         print("\n  No hay países cargados para calcular estadísticas.")
         return

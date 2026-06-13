@@ -30,6 +30,8 @@ tpi-gestion-paises-utn/
 │   ├── filtros.py
 │   ├── estadisticas.py
 │   └── paises.csv
+├── docs/
+│   └── documentacion.pdf
 ├── README.md
 └── test_tpi.py
 ```
